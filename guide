@@ -1,0 +1,34 @@
+https://stackoverflow.com/questions/36408134/how-to-test-file-upload-in-laravel-5-2
+
+CREATE FORM
+	HTML FORM for Customer Database
+		first_name
+		last_name
+		email
+		city
+		country
+		picture
+
+	Free Text Fields
+		- first_name
+		- last_name
+		- email
+		- city
+	SELECT
+		- country (United States, Canada, Japan, United Kingdom, Germany)
+	AUTO UPLOAD ON FILE CHANGE
+		- picture
+
+	SAVE BUTTON
+	CANCEL BUTTON(Resets except image)
+
+VIEW CUSTOMER
+	- view ?email parameter
+	- dislay information
+	- calculator
+		- result field
+		- calculator iframe
+			- buttons iframe
+			- display iframe
+
+https://stackoverflow.com/questions/7289139/why-are-iframes-considered-dangerous-and-a-security-risk
