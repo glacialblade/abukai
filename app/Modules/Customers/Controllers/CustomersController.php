@@ -5,6 +5,7 @@ namespace App\Modules\Customers\Controllers;
 use App\Handlers\Services\Modules\Customer\CreateForm;
 use App\Handlers\Services\Modules\Customer\UpdateForm;
 use App\Http\Controllers\Controller;
+use App\Repositories\Customer\CustomerRepository;
 use Illuminate\Http\Response;
 
 class CustomersController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-$controllerPath = "App\Modules\Customer\Controllers\\";
+$controllerPath = "App\Modules\Customers\Controllers\\";
 
 /*
 |--------------------------------------------------------------------------
