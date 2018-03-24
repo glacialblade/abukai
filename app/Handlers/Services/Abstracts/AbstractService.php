@@ -2,7 +2,7 @@
 
 namespace App\Handlers\Services\Abstracts;
 
-use App\Services\Exceptions\ServiceException;
+use App\Handlers\Services\Exceptions\ServiceException;
 
 abstract class AbstractService {
 

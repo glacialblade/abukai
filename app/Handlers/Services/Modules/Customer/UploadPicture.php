@@ -3,8 +3,11 @@
 namespace App\Handlers\Services\Modules\Customer;
 
 use App\Handlers\Services\Abstracts\AbstractCommonRequestService;
+use App\Handlers\Services\Traits\IdResourceTrait;
+use App\Repositories\Customer\CustomerRepository;
+use App\Handlers\Services\Helpers\Uploader\PictureUploader;
 
-class CreateForm implements AbstractCommonRequestService
+class UploadPicture extends AbstractCommonRequestService
 {
 	use IdResourceTrait;
 
@@ -76,7 +79,7 @@ class CreateForm implements AbstractCommonRequestService
 	 */
 	protected function unlinkOldPicture()
 	{
-		$customer = $this->repository->byId($id);
+		$customer = $this->repository->byId($this->id);
 
 		if(file_exists($customer->picture))
 		{

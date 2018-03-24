@@ -7,6 +7,7 @@ use App\Handlers\Services\Modules\Customer\UpdateForm;
 use App\Http\Controllers\Controller;
 use App\Repositories\Customer\CustomerRepository;
 use Illuminate\Http\Response;
+use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
@@ -29,24 +30,26 @@ class CustomersController extends Controller
 
 	/**
 	 * Listing Page with Add/Edit Form
-	 * 
-	 * @return view
+	 *
+	 * @param  Request $request
+	 * @return mixed(response|view)
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		return view('Customers::index')->withCustomers(
-			$this->repository->get()
-		);
+		return !$request->ajax() 
+			? view('Customers::index')
+			: response()->json($this->repository->get(), 200);
 	}
 
 	/**
 	 * Customer Detailed View
 	 * 
+	 * @param  email
 	 * @return view
 	 */
 	public function show($email)
 	{
-		return view('Customers::show')->withCustomers(
+		return view('Customers::show')->withCustomer(
 			$this->repository->byEmail($email)
 		);
 	}

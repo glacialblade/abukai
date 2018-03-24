@@ -41,7 +41,6 @@ class PictureUploader
 	public function __construct()
 	{
 		$this->request = request();
-		$this->validate();
 	}
 
 	/**
@@ -51,9 +50,10 @@ class PictureUploader
 	 */
 	protected function validate()
 	{
-		if($this->request->hasFile(($requestFileKey))
+		if($this->request->hasFile($this->requestFileKey))
 		{
-			$this->file = $this->request->($this->$requestFileKey);
+			$this->file = $this->request->{$this->requestFileKey};
+			return true;
 		}
 
 		throw new ServiceException('The request key specified does not contain a file.');
@@ -66,11 +66,13 @@ class PictureUploader
 	 */
 	public function upload()
 	{
-		$filename = uniqid().'.'.$file->guessClientExtension();
+		$this->validate();
+		
+		$filename = uniqid().'.'.$this->file->guessClientExtension();
 		$path = public_path($this->path);
 
 		// Save the File!
-		$file->move($path, $filename);
+		$this->file->move($path, $filename);
 
 		return "$path/$filename";
 	}

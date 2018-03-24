@@ -3,8 +3,10 @@
 namespace App\Handlers\Services\Modules\Customer;
 
 use App\Handlers\Services\Abstracts\AbstractCommonRequestService;
+use App\Repositories\Customer\CustomerRepository;
+use App\Handlers\Services\Helpers\Uploader\PictureUploader;
 
-class CreateForm implements AbstractCommonRequestService
+class CreateForm extends AbstractCommonRequestService
 {
 
 	/**
@@ -45,7 +47,7 @@ class CreateForm implements AbstractCommonRequestService
 			'email'      => 'required|email',
 			'city'       => 'required',
 			'country'    => 'required',
-			'picture'    => 'required|file|image'	
+			'picture'    => 'sometimes|file|image'	
 		];
 	}
 
@@ -60,7 +62,7 @@ class CreateForm implements AbstractCommonRequestService
 		$attributes = $this->request->all();
 
 		// Uploads the Picture and Returns the File Path
-		$attributes['picture'] = $this->uploader->upload();
+		$attributes['picture'] = isset($attributes['picture']) ? $this->uploader->upload() : '';
 
 		// Add Customer
 		$customer = $this->repository->store($attributes);

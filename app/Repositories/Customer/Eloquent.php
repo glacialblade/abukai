@@ -32,7 +32,7 @@ class Eloquent implements CustomerRepository
 	 */
 	public function byId($id)
 	{
-		return $this->model->firstOrFail($id);
+		return $this->model->findOrFail($id);
 	}
 	
 	/**

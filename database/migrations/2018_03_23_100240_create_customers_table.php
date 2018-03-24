@@ -20,7 +20,7 @@ class CreateCustomersTable extends Migration
             $table->string('email')->unique();
             $table->string('city');
             $table->string('country');
-            $table->string('picture');
+            $table->string('picture')->nullable();
             $table->timestamps();
         });
     }

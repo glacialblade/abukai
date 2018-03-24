@@ -16,5 +16,5 @@ Route::middleware('web')->group(function() use ($controllerPath)
 	Route::post('/', "{$controllerPath}CustomersController@store")->name('customers.store');
 	Route::put('/{id}', "{$controllerPath}CustomersController@update")->name('customers.update');
 
-	Route::put('/{id}/upload', "{$controllerPath}UploadController@update")->name('customers.update');
+	Route::put('/{id}/picture', "{$controllerPath}PicturesController@update")->name('customers.picture.update');
 });

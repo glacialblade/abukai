@@ -2,7 +2,7 @@
 
 namespace App\Handlers\Services\Abstracts;
 
-use App\Services\Exceptions\ServiceException;
+use App\Handlers\Services\Exceptions\ServiceException;
 
 /**
  * Abstract Class for Services that Uses Request
@@ -29,7 +29,7 @@ abstract class AbstractCommonRequestService extends \App\Handlers\Services\Abstr
 	 * Abstract Function from AbstractService
 	 * Validates the Request via Laravel Validation! returns abstracted function requestValid and they may override requestInvalid as well.
 	 */
-	public function __processService() 
+	public function processService() 
 	{
 		$this->request = request();
 		$result = $this->validate();

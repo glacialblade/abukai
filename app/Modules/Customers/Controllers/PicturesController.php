@@ -4,8 +4,9 @@ namespace App\Modules\Customers\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
+use App\Handlers\Services\Modules\Customer\UploadPicture;
 
-class UploadController extends Controller
+class PicturesController extends Controller
 {
 
 	/**
@@ -16,7 +17,11 @@ class UploadController extends Controller
 	 */
 	public function update($id)
 	{
-
+		$result = (app()->make(UploadPicture::class))
+			->setId($id)
+			->run();
+			
+		return response()->json($result->data, $result->code);
 	}
 
 }

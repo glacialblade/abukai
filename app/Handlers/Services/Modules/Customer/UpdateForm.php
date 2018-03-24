@@ -4,8 +4,9 @@ namespace App\Handlers\Services\Modules\Customer;
 
 use App\Handlers\Services\Abstracts\AbstractCommonRequestService;
 use App\Handlers\Services\Traits\IdResourceTrait;
+use App\Repositories\Customer\CustomerRepository;
 
-class UpdateForm implements AbstractCommonRequestService
+class UpdateForm extends AbstractCommonRequestService
 {
 	use IdResourceTrait;
 
