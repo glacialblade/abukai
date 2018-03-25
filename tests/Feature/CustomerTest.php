@@ -52,11 +52,8 @@ class CustomerTest extends TestCase
     {
         makeCustomer([], 5);
 
-        // Call via ajax
-        $response = $this->get(route('customers.index'), ['HTTP_X-Requested-With' => 'XMLHttpRequest']);
+        $response = $this->get(route('customers.index'));
         $response->assertStatus(200);
-
-        $this->assertCount(5, $response->getData());
     }
     
     /** @test */
@@ -81,6 +78,10 @@ class CustomerTest extends TestCase
         $response = $this->json('POST', $uri, $this->defaultParams);
         $response->assertStatus(200);
 
+        // Email Address must be UNIQUE!
+        $response = $this->json('POST', $uri, $this->defaultParams);
+        $this->checkValidatedFields($response, ['email']);
+
         // Store the Customer Details WITH FULL DETAILS!
         $picture = UploadedFile::fake()->image('picture.png', 150, 150);
         $response = $this->json('POST', $uri, array_merge($this->defaultParams, ['email' => 'foo@bar.com', 'picture' => $picture]));
@@ -91,6 +92,7 @@ class CustomerTest extends TestCase
     public function it_can_validate_and_update_customer()
     {
         $customer = makeCustomer(['email' => 'editme@abukai.com']);
+        $customer2 = makeCustomer(['email' => 'dontduplicateme@abukai.com']);
 
         $uri = route('customers.update', [$customer->id]);
 
@@ -100,6 +102,10 @@ class CustomerTest extends TestCase
 
         // Validates Email
         $response = $this->json('PUT', $uri, array_merge($this->defaultParams, ['email' => 'wrongFormat123']));
+        $this->checkValidatedFields($response, ['email']);
+
+        // Validates Email Unique
+        $response = $this->json('PUT', $uri, array_merge($this->defaultParams, ['email' => 'dontduplicateme@abukai.com']));
         $this->checkValidatedFields($response, ['email']);
 
         // Update the Customer!
