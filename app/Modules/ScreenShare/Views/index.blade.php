@@ -8,7 +8,7 @@
                 <div class="panel-heading">Screen Share</div>
                 
                 <div class="panel-body">
-                    <button class="btn btn-default" id="share-screen">Share Screen</button>
+                    <button class="btn btn-default" id="share-screen">Choose a Screen to Share</button>
                     <div id="video"></div>
                 </div>
             </div>
