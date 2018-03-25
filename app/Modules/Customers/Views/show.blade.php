@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ $customer->first_name }} {{ $customer->last_name }}</div>
+                <div class="panel-heading">
+                    {{ $customer->first_name }} {{ $customer->last_name }}
+                </div>
 
                 <div class="panel-body">
                     <div class="row">
@@ -44,7 +46,7 @@
                     <input type="text" id="result" class="form-control" disabled />
                     <br/>
                     <strong>Calculator</strong>
-                    <iframe src="{{ route('calculator.index') }}" style="width: 100%; border: 0; height: 300px;"></iframe>
+                    <iframe src="{{ route('calculator.index') }}" style="width: 100%; border: 0; height: 238px;"></iframe>
                 </div>
             </div>
         </div>

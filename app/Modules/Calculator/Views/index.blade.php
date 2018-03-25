@@ -3,7 +3,7 @@
 @section('content')
 
     <iframe id="display" src="{{ route('calculator.display') }}" style="width: 100%; border: 0; height: 50px;"></iframe>
-    <iframe id="buttons" src="{{ route('calculator.buttons') }}" style="width: 100%; border: 0; height: 300px;"></iframe>
+    <iframe id="buttons" src="{{ route('calculator.buttons') }}" style="width: 100%; border: 0; height: 200px;"></iframe>
 
 @endsection
 

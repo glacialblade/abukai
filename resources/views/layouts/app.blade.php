@@ -35,6 +35,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="/">Customer's List</a></li>
+                        <li><a href="/screen-share">Screen Share</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
