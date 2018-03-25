@@ -54,6 +54,7 @@
         <script src="/bower_components/lodash/lodash.js"></script>
         <script src="/js/utils.js"></script>
         <script src="/js/app.js"></script>
+        @yield('scripts')
     </div>
 </body>
 </html>
