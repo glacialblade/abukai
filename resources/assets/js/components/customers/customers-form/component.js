@@ -36,6 +36,7 @@ class CustomersForm extends CommonComponent
         // Elements Configuration
         this.el = {};
         this.el.selector = $('#'+this.props.component_id);
+        this.el.modal = this.el.selector.find('#customers-modal');
 
         this.events.jQueryEvents();
     }

@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="{{ $customer->picture ? $customer->picture : '/images/default-profile.png' }}" style="width: 100%" />
+                            <img src="{{ $customer->picture ? $customer->picture_uri : '/images/default-profile.png' }}" style="width: 100%" />
                         </div>
                         <div class="col-md-8">
                             <div class="row">

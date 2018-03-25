@@ -32,26 +32,29 @@ class CustomersController extends Controller
 	 * Listing Page with Add/Edit Form
 	 *
 	 * @param  Request $request
-	 * @return mixed(response|view)
+	 * @return view
 	 */
 	public function index(Request $request)
 	{
-		return !$request->ajax() 
-			? view('Customers::index')
-			: response()->json($this->repository->get(), 200);
+		return view('Customers::index')->withCustomers(
+			$this->repository->get()
+		);
 	}
 
 	/**
 	 * Customer Detailed View
 	 * 
+	 * @param  Request $request
 	 * @param  email
-	 * @return view
+	 * @return mixed(view|response)
 	 */
-	public function show($email)
+	public function show(Request $request, $email)
 	{
-		return view('Customers::show')->withCustomer(
-			$this->repository->byEmail($email)
-		);
+		$customer = $this->repository->byEmail($email);
+
+		return !$request->ajax()
+			? view('Customers::show')->withCustomer($customer)
+			: response()->json($customer, 200);
 	}
 
 	/**

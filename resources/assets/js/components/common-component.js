@@ -1,5 +1,21 @@
+import { Helpers } from 'helpers/base';
+
 export class CommonComponent extends React.Component 
 {
+    helpers(type)
+    {
+        // Inintialize Helper Instances
+        this.helpersInstances = this.helpersInstances ? this.helpersInstances : {};
+
+        // Set Helper
+        if(!this.helpersInstances[type])
+        {
+            var helpers = new Helpers(this, type);
+            this.helpersInstances[type] = helpers.getClass();
+        }
+        
+        return this.helpersInstances[type];
+    }
 
     /**
      * Handle Change of Form Fields to set State

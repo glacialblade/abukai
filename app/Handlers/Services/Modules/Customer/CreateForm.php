@@ -44,10 +44,10 @@ class CreateForm extends AbstractCommonRequestService
 		return [
 			'first_name' => 'required',
 			'last_name'  => 'required',
-			'email'      => 'required|email',
+			'email'      => 'required|email|unique:customers,email',
 			'city'       => 'required',
 			'country'    => 'required',
-			'picture'    => 'sometimes|file|image'	
+			'picture'    => 'nullable|sometimes|file|image'	
 		];
 	}
 

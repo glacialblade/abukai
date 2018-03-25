@@ -44,7 +44,7 @@ class UpdateForm extends AbstractCommonRequestService
 		return [
 			'first_name' => 'required',
 			'last_name'  => 'required',
-			'email'      => 'required|email',
+			'email'      => 'required|email|unique:customers,email,'.$this->id,
 			'city'       => 'required',
 			'country'    => 'required'
 		];

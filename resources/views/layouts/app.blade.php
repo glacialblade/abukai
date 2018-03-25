@@ -47,6 +47,11 @@
 
         @yield('content')
 
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bower_components/lodash/lodash.js"></script>
         <script src="/js/utils.js"></script>
         <script src="/js/app.js"></script>
     </div>
