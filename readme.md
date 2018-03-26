@@ -19,7 +19,7 @@
 	<li>Has a default image.</li>
 	<li>Everything is the form is required.</li>
 	<li>Email is unique and must be in the right format.</li>
-	<li>Auto Upload Picture only works on edit.</li>
+	<li>Auto Upload Picture only works on edit, also deletes the old image.</li>
 	<li>Has a link to the view page.</li>
 </ul>
 <br/>
