@@ -1,5 +1,5 @@
 <h1>Abukai Exam</h1>
-<strong>Please force the page to be HTTPS. and install <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">SCREEN CAPTURING PLUGIN</a>. This is also the <a href="https://abukai.kevincotongco.com">link to the website</a></strong>.
+<strong>Please force the page to be HTTPS. and install <a target="_blank" href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">SCREEN CAPTURING PLUGIN</a>. This is also the <a target="_blank" href="https://abukai.kevincotongco.com">link to the website</a></strong>.
 <br/>
 <h3>Technologies Used</h3>
 <strong>List of technologies I used for this exam.</strong>
@@ -32,7 +32,7 @@
 <strong>Screen Share</strong>
 <ul>
 	<li>Please force the page to be HTTPS.</li>
-	<li>Please install <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">plugin</a>.</li>
+	<li>Please install <a target="_blank" href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">plugin</a>.</li>
 	<li>Shows a button to share screen.</li>
 	<li>Links a button to a streaming page.</li>
 </ul>
