@@ -38,7 +38,7 @@ class Customer extends Model
 	{
 		if($this->picture)
 		{
-			return explode('public', $this->picture)[1];
+			return '/'.explode('public/', $this->picture)[1];
 		}
 
 		return '';
