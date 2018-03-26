@@ -43,7 +43,7 @@ class Events
     {
         var file = this.component.refs.picture.files[0];
         var form = this.component.state.form;
-        form.picture = file && file.type.match('image') ? this.component.refs.picture.files[0] : undefined;
+        form.picture = file && file.type.match('image') ? this.component.refs.picture.files[0] : '';
 
         this.component.setState({ form: form, pictureFileName: form.picture ? form.picture.name : '' });
 

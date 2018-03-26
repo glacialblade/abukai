@@ -16,12 +16,6 @@ document.getElementById('share-screen').onclick = function() {
     screen.share();
 };
 
-// screen.openSignalingChannel = function(callback) {
-//     console.log(1);
-//     return io.connect().on('message', callback);
-// };
-// screen.firebase = 'chat';
-
 var loaded = false;
 screen.onscreen = function(_screen) {
     // Auto Load

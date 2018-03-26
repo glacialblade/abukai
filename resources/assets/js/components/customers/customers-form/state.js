@@ -1,6 +1,6 @@
 var state = {
 	form: {
-		picture: undefined,
+		picture: '',
 		first_name: '',
 		last_name: '',
 		email: '',

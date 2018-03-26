@@ -2,9 +2,10 @@
 
 namespace App\Modules\ScreenShare\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
 use App\Handlers\Services\Modules\Customer\UploadPicture;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ScreenShareController extends Controller
 {
@@ -14,9 +15,9 @@ class ScreenShareController extends Controller
 	 *
 	 * @return view
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		return view('ScreenShare::index');
+		return view('ScreenShare::index')->withView($request->view);
 	}
 
 }

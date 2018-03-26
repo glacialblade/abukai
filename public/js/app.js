@@ -376,7 +376,7 @@ var FormHelper = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return state; });
 var state = {
 	form: {
-		picture: undefined,
+		picture: '',
 		first_name: '',
 		last_name: '',
 		email: '',
@@ -457,7 +457,7 @@ var Events = function () {
         value: function changePicture() {
             var file = this.component.refs.picture.files[0];
             var form = this.component.state.form;
-            form.picture = file && file.type.match('image') ? this.component.refs.picture.files[0] : undefined;
+            form.picture = file && file.type.match('image') ? this.component.refs.picture.files[0] : '';
 
             this.component.setState({ form: form, pictureFileName: form.picture ? form.picture.name : '' });
 

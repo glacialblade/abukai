@@ -8,7 +8,10 @@
                 <div class="panel-heading">Screen Share</div>
                 
                 <div class="panel-body">
-                    <button class="btn btn-default" id="share-screen">Choose a Screen to Share</button>
+                    @if(!$view)
+                        <button class="btn btn-success" id="share-screen">Choose a Screen to Share</button> &nbsp;
+                        <a href="?view=true" target="_blank" class="btn btn-default" id="share-screen">Stream Link</a>
+                    @endif
                     <div id="video"></div>
                 </div>
             </div>
