@@ -46,7 +46,7 @@ I also have form handlers so controllers is much easier to read.
 Also applied repository pattern as I don't want to bloat my models as well and I think it's a good way to have a good quality code, handle queries in much more larger apps and much more flexible in switching databases. This is registered via provider as well in config/app.php and file is app/Providers/RepositoryProvider.
 <br/><br/>
 <strong>Routing</strong><br>
-I have different controllers with the customers basic crud and auto upload photo(on edit). Just to be true to the resourceful routes for much better and readable code. <br/>
+I have 2 controllers for the customer's basic crud and auto upload photo(on edit). I did this just to be true to the resourceful routes which I avoid adding functions rather than the 7 resourceful routs so I extracted the auto upload in a new controller, Reason is for me, It's much more cleaner, well structured and readable code.<br/><br/>
 Although exception for the calculator module I just applied the all of it in a single controller cause I don't think this one needs to be restful.
 <br/><br/>
 <strong>React JS</strong><br>
