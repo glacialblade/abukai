@@ -39,8 +39,9 @@
 <br/><br/>
 <h3>Codes</h3>
 <strong>Modular Structure</strong><br/>
-My approach is a modular structure see in app/Modules/ folder and modules can be setup in config/modules.php. This service is registered in config/app.php and the service class is in app/Providers/ModularServiceProvider.php.<br/>
-I also have form handlers so controllers is much easier to read.
+My approach is modular structure see in app/Modules/* and these modules can be setup in config/modules.php. This service is registered in config/app.php and the service class is in app/Providers/ModularServiceProvider.php.<br/>
+<br/>
+I also have form handlers so controllers is much easier to read. Files are located in app/Handlers/Services/*
 <br><br>
 <strong>Repository Pattern</strong><br>
 Also applied repository pattern as I don't want to bloat my models as well and I think it's a good way to have a good quality code, handle queries in much more larger apps and much more flexible in switching databases. This is registered via provider as well in config/app.php and file is app/Providers/RepositoryProvider.
