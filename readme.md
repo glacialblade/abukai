@@ -1,5 +1,5 @@
 <h1>Abukai Exam</h1>
-<strong>Please force the page to be HTTPS. and install <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">SCREEN CAPTURING PLUGIN</a>. <a href="https://abukai.kevincotongco.com">Visit Page</a></strong>
+<strong>Please force the page to be HTTPS. and install <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">SCREEN CAPTURING PLUGIN</a>. This is also the <a href="https://abukai.kevincotongco.com">link to the website</a></strong>.
 <br/>
 <h3>Technologies Used</h3>
 <strong>List of technologies I used for this exam.</strong>
@@ -10,7 +10,7 @@
 	<li>Laravel Framework 5.5</li>
 	<li>React JS/jQuery</li>
 </ul>
-<br/><br/>
+<br/>
 <h3>Pages</h3>
 <strong>Customer's List</strong>
 <ul>
@@ -22,13 +22,13 @@
 	<li>Auto Upload Picture only works on edit.</li>
 	<li>Has a link to the view page.</li>
 </ul>
-<br/><br/>
+<br/>
 <strong>View</strong>
 <ul>
 	<li>Able to display customer information.</li>
 	<li>Has a calculator with iframes structure.</li>
 </ul>
-<br/><br/>
+<br/>
 <strong>Screen Share</strong>
 <ul>
 	<li>Please force the page to be HTTPS.</li>
